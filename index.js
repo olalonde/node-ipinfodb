@@ -34,19 +34,19 @@ Client.prototype.geolocate = function (ip, cb) {
   });;
 }
 function timezone2timezoneOffset(timezone) {
+  //console.log(timezone);
+  if (timezone.length <= 1) return 0;
   timezone = timezone.split(':');
   var hours = parseInt(timezone[0], 10);
   var minutes = parseInt(timezone[1], 10);
   if (hours < 0) minutes = -minutes;
   // convert to minutes
-  return hours * 60 + minutes;
+  return -1 * (hours * 60 + minutes);
 };
 
 Client.prototype.ip2timezoneOffset = function (ip, cb) {
   this.geolocate(ip, function (err, res) {
     if (err) return cb(err);
-
-    console.log(res.timeZone);
     cb(null, timezone2timezoneOffset(res.timeZone));
   });
 }
