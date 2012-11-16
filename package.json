@@ -1,0 +1,21 @@
+{
+  "name": "ipinfodb",
+  "version": "0.0.1",
+  "description": "Wrapper for ipinfodb.com API (ip to timezone)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olalonde/node-ipinfodb.git"
+  },
+  "keywords": [
+    "ip",
+    "timezone",
+    "geolocation",
+    "ipinfodb"
+  ],
+  "author": "Olivier Lalonde <olalonde@gmail.com>",
+  "license": "BSD"
+}
